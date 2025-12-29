@@ -1,1 +1,23 @@
-
+{
+  "$schema": "https://codesandbox.io/.codesandbox/schema.json",
+  "setupTasks": [
+    {
+      "name": "Install root deps",
+      "command": "npm install"
+    },
+    {
+      "name": "Install client deps",
+      "command": "cd client && npm install"
+    }
+  ],
+  "tasks": {
+    "client": {
+      "name": "Client (Vite)",
+      "command": "cd client && npm run dev -- --host 0.0.0.0 --port 5173",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
+    }
+  }
+}
