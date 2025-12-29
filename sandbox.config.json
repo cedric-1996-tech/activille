@@ -1,0 +1,19 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install root deps",
+      "command": "npm install"
+    },
+    {
+      "name": "Install client deps",
+      "command": "cd client && npm install"
+    }
+  ],
+  "tasks": {
+    "dev": {
+      "name": "Run client dev server",
+      "command": "cd client && npm run dev",
+      "runAtStart": true
+    }
+  }
+}
